@@ -15,4 +15,5 @@ async def bot_start(message: types.Message):
 @dp.callback_query_handler(text='create')
 async def create_user(call: CallbackQuery):
     await call.answer(cache_time=10)
+    #here will be the bot deployment code
     await call.message.answer("You create new bot")
