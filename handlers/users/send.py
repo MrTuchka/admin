@@ -5,7 +5,7 @@ from aiogram import types
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters import Command
 from aiogram.types import CallbackQuery
-from states.support import support
+from states.create_bot import support
 from keyboards.inline.sending import send_messages, cancel
 from utils.db_api.dbconfig import get_all_users
 

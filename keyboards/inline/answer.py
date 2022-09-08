@@ -4,7 +4,7 @@ answer = InlineKeyboardMarkup(row_width=2,
                                  inline_keyboard=[
                                      [
                                          InlineKeyboardButton(
-                                             text="Відповісти користувачу",
+                                             text="✔ Відповісти користувачу",
                                              callback_data="yes"
                                          ),
                                      ]
@@ -14,7 +14,7 @@ stop = InlineKeyboardMarkup(row_width=2, one_time_keyboard=True,
                                  inline_keyboard=[
                                      [
                                          InlineKeyboardButton(
-                                             text="Завершити бесіду",
+                                             text="❌ Завершити бесіду",
                                              callback_data="stop",
                                          ),
                                      ]
