@@ -1,7 +1,7 @@
 # this is the .env file template that will be put into the bot directory before running it.
 DOT_ENV_TEMPLATE = """
 BOT_TOKEN={BOT_TOKEN}
-ADMINS=178875921,5441358236
+ADMINS={BOT_ADMIN_ID}
 ip=localhost
 """
 

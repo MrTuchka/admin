@@ -20,7 +20,7 @@ class BotDeployer:
             if not self._exists(deployment_id):
                 return deployment_id
 
-    def deploy(self, github_repo: str, bot_token: str) -> str:
+    def deploy(self, github_repo: str, bot_token: str, admin_id: str) -> str:
         deployments_dir = "deployments"
         supervisor_dir = "supervisor"
         logs_dir = "logs"
@@ -37,7 +37,7 @@ class BotDeployer:
             self._connection.run(f"git clone {github_repo} {deployment_id}", hide=True)
 
         # render .env template and place it in the new deployments' directory.
-        dot_env = DOT_ENV_TEMPLATE.format(BOT_TOKEN=bot_token)
+        dot_env = DOT_ENV_TEMPLATE.format(BOT_TOKEN=bot_token, BOT_ADMIN_ID=admin_id)
         self._connection.put(io.StringIO(dot_env), f"{deployments_dir}/{deployment_id}/.env")
 
         # create logs directory
